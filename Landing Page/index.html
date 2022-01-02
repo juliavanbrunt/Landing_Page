@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/custom-style.css">
+    <style>
+      #header-img {
+        width: 500px;
+      }
+
+      @media only screen and (max-width: 760px) {
+        /* For mobile phones: */
+        [class*="col-"] {
+          width: 100%;
+        }
+      }
+      .flex-container {
+  display: flex;
+  background-color: rgb(20, 0, 120);
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 35px;
+  padding: 20px;
+  font-size: 20px;
+}
+    </style>
+  </head>
+
+  <body>
+    <header id="header">
+      <center>
+        <img id="header-img" src="https://boutsy.com/images/product/il_fullxfull.2328628098_qed2_1.jpg"/>
+        <nav id="nav-bar">
+          <a class="nav-link" href="#learn-more">Learn More</a>
+          <a class="nav-link" href="#request-coupon">Request Coupon</a>
+          <a class="nav-link" href="#buy-on-amazon">Buy on Amazon</a>
+        </nav>
+      <center/>
+    </header>
+    <section id="learn-more">
+      <center>
+        <h1>Product Landing Page</h1>
+        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/VKtEyzFAxJg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </center>
+    </section>
+    <section id="request-coupon">
+      <center>
+        <h2>Request a Coupon</h2>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+          <input id="email" type="email" placeholder="you@email.com" name="email"></input>
+          <input id="submit" type="submit"></input>
+        </form>
+      </center>
+    </section>
+    <section id="buy-on-amazon">
+      <div class="flex-container">
+        <div><a href="amazon-affiliate-link">Buy on Amazon</a></div>
+        <div><a href="crutchfield-affiliate-link">Buy on Crutchfield"</a></div>
+        <div><a href="shure-affiliate-link">Buy on Shure</a></div>
+      </div>
+    </section>
+  </body>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <script>
+    window.onscroll = function() {myFunction()};
+
+    var header = document.getElementById("header");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+       console.log('scroll triggered')
+       if (window.pageYOffset > sticky) {
+         header.classList.add("sticky");
+       } else {
+         header.classList.remove("sticky");
+       }
+    }
+    </script>
+</html>
